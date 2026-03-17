@@ -1,0 +1,25 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX nct: <http://n2t.net/ark:/39333/ncg/type#>
+PREFIX ncv: <http://n2t.net/ark:/39333/ncg/vocab#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+# # creeks in Orange County
+# SELECT ?uri ?name WHERE {
+
+# }
+# PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+# PREFIX ncv:  <http://n2t.net/ark:/39333/ncg/vocab#>
+
+SELECT ?uri ?name
+WHERE {
+  # 1. 找到 Orange County 的 URI
+  ?county skos:prefLabel ?cname .
+  FILTER( LCASE(STR(?cname)) = "orange county" )
+
+  # 2. 找在這個 county 裡的地點
+  ?uri ncv:county ?county ;
+       dcterms:type nct:creek ;
+       skos:prefLabel ?name .
+
+}
+ORDER BY LCASE(STR(?uri))

@@ -1,0 +1,22 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX geojson: <https://purl.org/geojson/vocab#>
+PREFIX nct: <http://n2t.net/ark:/39333/ncg/type#>
+PREFIX ncv: <http://n2t.net/ark:/39333/ncg/vocab#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?uri ?name ?county_name
+WHERE {
+  # 1. 找到 Orange County 的 URI
+  ?county skos:prefLabel ?county_name .
+  FILTER( LCASE(STR(?county_name)) IN ("orange county","chatham county") )
+
+
+  # 2. 找在這個 county 裡的地點
+  ?uri ncv:county ?county ;
+       dcterms:type nct:creek ;
+       skos:prefLabel ?name .
+  
+  FILTER NOT EXISTS { ?uri geojson:geometry ?geometry }
+
+}
+ORDER BY LCASE(STR(?county_name))

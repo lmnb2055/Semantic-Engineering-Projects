@@ -1,0 +1,11 @@
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX ncv: <http://n2t.net/ark:/39333/ncg/vocab#>
+
+# county that Choggy Butte Mountain is in
+SELECT ?county_name WHERE {
+    ?mountain skos:prefLabel ?label .
+    FILTER( LCASE(STR(?label)) = "choggy butte mountain" )
+    
+    ?mountain ncv:county ?county .
+    ?county skos:prefLabel ?county_name .
+}

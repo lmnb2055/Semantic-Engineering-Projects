@@ -1,0 +1,6 @@
+# list all predicates used
+SELECT DISTINCT ?predicate WHERE {
+    ?s ?predicate ?o . 
+}
+ORDER BY LCASE(STR(?predicate))
+

@@ -1,0 +1,10 @@
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?predicate ?object
+WHERE {
+  ?uri skos:prefLabel ?label .
+  FILTER( LCASE(STR(?label)) = "choggy butte mountain" )
+  
+  ?uri ?predicate ?object .
+}
+ORDER BY LCASE(STR(?predicate)) LCASE(STR(?object))

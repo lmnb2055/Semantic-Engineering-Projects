@@ -1,0 +1,10 @@
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?uri ?name WHERE {
+  ?uri skos:prefLabel ?name .
+  # Note: 'i' makes the search case-insensitive
+  FILTER( REGEX(STR(?name), "butt", "i") )
+}
+
+ORDER BY LCASE(STR(?name)) ?uri
+

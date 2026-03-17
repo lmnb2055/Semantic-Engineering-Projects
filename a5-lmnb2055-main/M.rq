@@ -1,0 +1,25 @@
+PREFIX bd: <http://www.bigdata.com/rdf#>
+PREFIX wikibase: <http://wikiba.se/ontology#>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?watercourse ?watercourseLabel ?type ?typeLabel
+WHERE {
+  ?watercourse wdt:P131* wd:Q507957 .
+
+
+  ?watercourse wdt:P31 ?type .
+
+ 
+  VALUES ?root {
+    wd:Q47521  # 
+    wd:Q355304 
+    wd:Q4022   
+    wd:Q685150 
+    wd:Q12284  
+  }
+  ?type wdt:P279* ?root .
+
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
+}
+ORDER BY ?watercourseLabel

@@ -1,0 +1,22 @@
+PREFIX bd: <http://www.bigdata.com/rdf#>
+PREFIX wikibase: <http://wikiba.se/ontology#>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+# NC counties with at least 50 swamps
+SELECT ?county ?countyLabel ?swampCount
+WHERE {
+  {
+    SELECT ?county (COUNT(DISTINCT ?swamp) AS ?swampCount)
+    WHERE {
+      ?county wdt:P31 wd:Q13414758 .
+      ?swamp wdt:P131* ?county ;
+             wdt:P31/wdt:P279* wd:Q166735 .
+    }
+    GROUP BY ?county
+    HAVING (?swampCount >= 50)
+  }
+
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
+}
+ORDER BY ?countyLabel

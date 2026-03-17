@@ -1,0 +1,32 @@
+@prefix ex: <https://example.org/> .
+@prefix schema: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:tv-series_the-summer-i-turned-pretty a schema:TVSeries ;
+    schema:name "The Summer I Turned Pretty" ;
+    schema:description "A coming-of-age drama following Isabel 'Belly' Conklin as she navigates love triangles and family dynamics during summer vacations at a beach house." ;
+    schema:genre "Romance", "Drama", "Coming-of-age" ;
+    schema:numberOfSeasons 2 ;
+    schema:startDate "2022-06-17"^^xsd:date ;
+    schema:productionCompany ex:amazon-studios ;
+    schema:creator ex:person_jenny-han ;
+    schema:actor ex:person_lola-tung,
+                 ex:person_christopher-briney,
+                 ex:person_gavin-casalegno ;
+    schema:basedOn ex:book_the-summer-i-turned-pretty-trilogy ;
+    schema:contentRating "TV-14" ;
+    schema:inLanguage "en" ;
+    schema:aggregateRating [
+        a schema:AggregateRating ;
+        schema:ratingValue "7.4" ;
+        schema:bestRating "10" ;
+        schema:ratingCount 25000
+    ] .
+
+ex:person_jenny-han a schema:Person ;
+    schema:name "Jenny Han" ;
+    schema:jobTitle "Creator", "Executive Producer" .
+
+ex:person_lola-tung a schema:Person ;
+    schema:name "Lola Tung" ;
+    schema:jobTitle "Actor" .
