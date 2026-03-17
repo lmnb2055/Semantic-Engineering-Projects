@@ -1,0 +1,54 @@
+@prefix :    <http://example.org/sils#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+
+:LogIndex
+    a owl:Class ;
+    rdfs:label "Log index"@en .
+
+:LogCategory
+    a owl:Class ;
+    rdfs:label "Log category"@en .
+
+:LogGroup
+    a owl:Class ;
+    rdfs:label "Log group"@en .
+
+:Sourcetype
+    a owl:Class ;
+    rdfs:label "Sourcetype"@en .
+
+
+# sils categorizes sys, app
+:categorizes
+    a owl:ObjectProperty ;
+    rdfs:label "categorizes"@en ;
+    rdfs:domain :LogIndex ;
+    rdfs:range  :LogCategory .
+
+# sys / app hasLogGroup syslogs, apache, ...
+:hasLogGroup
+    a owl:ObjectProperty ;
+    rdfs:label "has log group"@en ;
+    rdfs:domain :LogCategory ;
+    rdfs:range  :LogGroup .
+
+# log group -> sourcetype（lms, ls, aa...）
+:beSourcetype
+    a owl:ObjectProperty ;
+    rdfs:label "has sourcetype"@en ;
+    rdfs:domain :LogGroup ;
+    rdfs:range  :Sourcetype .
+
+
+# LogCategory descriptions
+:LogCategory
+    rdfs:comment "A category of logs that groups related log groups."@en .
+
+:LogGroup
+    rdfs:comment "A group of logs that share the same sourcetype."@en .
+
+:Sourcetype
+    rdfs:comment "A Splunk sourcetype used to index a group of logs."@en .

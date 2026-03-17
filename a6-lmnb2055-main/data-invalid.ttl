@@ -1,0 +1,94 @@
+@prefix :    <http://example.org/sils#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+:sils
+  rdfs:label "SILS Index"@en ;
+  :categorizes :sys , :app .
+
+:sys
+  rdfs:label "System-related"@en ;
+  :hasLogGroup :syslogs , :autlogs , :diagmsglogs , :kerlogs , :packagemanagementlogs , :maillogs , :sudologs .
+
+:app
+  rdfs:label "Application-related"@en ;
+  :hasLogGroup :zabbix , :audit , :puppet , :database , :apache , :php , :vault , :shibboleth .
+
+
+:syslogs
+  rdfs:label "System Logs"@en ;
+  :beSourcetype :lms .
+
+:autlogs
+  rdfs:label "Authentication Logs"@en ;
+  :beSourcetype :ls .
+
+:diagmsglogs
+  rdfs:label "Diagnostic Messages Logs"@en ;
+  :beSourcetype :dmesg .
+
+:kerlogs
+  rdfs:label "Kernel Logs"@en ;
+  :beSourcetype :lms .
+
+:packagemanagementlogs
+  rdfs:label "Package Management Logs"@en ;
+  :beSourcetype :lms .
+
+:maillogs
+  rdfs:label "Mail Logs"@en ;
+  :beSourcetype :ps .
+
+:sudologs
+  rdfs:label "Sudo Logs"@en ;
+  :beSourcetype :ls .
+
+
+:zabbix
+  rdfs:label "Zabbix Logs"@en ;
+  :beSourcetype :ls .
+
+:audit
+  rdfs:label "File Audit Logs"@en ;
+  :beSourcetype :ls .
+
+:puppet
+  rdfs:label "Puppetlab Logs"@en ;
+  :beSourcetype :ls .
+
+:database
+  rdfs:label "Database Logs"@en ;
+  :beSourcetype :ls .
+
+:apache
+  rdfs:label "Apache Logs"@en ;
+  :beSourcetype :aa , :ae .
+
+:php
+  rdfs:label "PHP Logs"@en ;
+  :beSourcetype :ls .
+
+:vault
+  rdfs:label "Vault Logs"@en .
+
+:shibboleth
+  rdfs:label "Shibboleth Logs"@en .
+
+
+:lms
+  rdfs:label "linux_messages_syslog"@en .
+
+:ls
+  rdfs:label "linux_secure"@en .
+
+:dmesg
+  rdfs:label "dmesg"@en .
+
+:ps
+  rdfs:label "postfix_syslog"@en .
+
+:aa
+  rdfs:label "apache:access"@en .
+
+:ae
+  rdfs:label "apache:error"@en .

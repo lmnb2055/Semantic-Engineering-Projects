@@ -1,0 +1,55 @@
+@prefix :    <http://example.org/sils#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh:  <http://www.w3.org/ns/shacl#> .
+
+
+:LogCategoryShape
+    a sh:NodeShape ;
+    # categorize -> sys, app
+    sh:targetObjectsOf :categorizes ;
+
+    sh:property [
+        sh:path rdfs:label ;
+        sh:nodeKind sh:Literal ;   # @en is rdf:langString
+        sh:minCount 1 ;
+    ] ;
+
+    # at least -> hasLogGroup
+    sh:property [
+        sh:path :hasLogGroup ;
+        sh:minCount 1 ;
+    ] .
+
+
+:LogGroupShape
+    a sh:NodeShape ;
+    # hasLogGroup -> syslogs, apache, ...
+    sh:targetObjectsOf :hasLogGroup ;
+
+    # at least one rdfs:label
+    sh:property [
+        sh:path rdfs:label ;
+        sh:nodeKind sh:Literal ;
+        sh:minCount 1 ;
+    ] ;
+
+    # at least one :beSourcetype
+    sh:property [
+        sh:path :beSourcetype ;
+        sh:minCount 1 ;
+        sh:nodeKind sh:IRI ;
+    ] .
+
+
+:SourcetypeShape
+    a sh:NodeShape ;
+    # :beSourcetype -> lms, ls, aa..
+    sh:targetObjectsOf :beSourcetype ;
+
+    # rdfs:label
+    sh:property [
+        sh:path rdfs:label ;
+        sh:nodeKind sh:Literal ;
+        sh:minCount 1 ;
+    ] .
