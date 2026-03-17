@@ -1,0 +1,8 @@
+<http://example.org/james_bond> <http://example.org/hasName> "James Bond" .
+<http://example.org/james_bond> <http://example.org/hasOccupation> "Spy" .
+<http://example.org/james_bond> <http://example.org/hasAge> "40"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://example.org/james_bond> <http://example.org/hasLicenseToKill> "Yes" .
+<http://example.org/james_bond> <http://example.org/appearsIn> "Dr. No" .
+<http://example.org/james_bond> <http://example.org/appearsIn> "Goldfinger" .
+<http://example.org/james_bond> <http://example.org/appearsIn> "Skyfall" .
+<http://example.org/james_bond> <http://example.org/hasGadget> "Aston Martin DB5" .
