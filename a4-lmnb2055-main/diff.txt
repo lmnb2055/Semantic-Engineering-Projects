@@ -1,0 +1,28 @@
+models are unequal
+
+< 55 triples
+> 79 triples
+> [http://example.org/sils#sils, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/sils#Index]
+> [http://example.org/sils#sys, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/sils#Category]
+> [http://example.org/sils#app, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/sils#Category]
+> [http://example.org/sils#syslogs, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/sils#LogGroup]
+> [http://example.org/sils#autlogs, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/sils#LogGroup]
+> [http://example.org/sils#diagmsglogs, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/sils#LogGroup]
+> [http://example.org/sils#kerlogs, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/sils#LogGroup]
+> [http://example.org/sils#packagemanagementlogs, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/sils#LogGroup]
+> [http://example.org/sils#maillogs, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/sils#LogGroup]
+> [http://example.org/sils#sudologs, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/sils#LogGroup]
+> [http://example.org/sils#zabbix, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/sils#LogGroup]
+> [http://example.org/sils#audit, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/sils#LogGroup]
+> [http://example.org/sils#puppet, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/sils#LogGroup]
+> [http://example.org/sils#database, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/sils#LogGroup]
+> [http://example.org/sils#apache, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/sils#LogGroup]
+> [http://example.org/sils#php, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/sils#LogGroup]
+> [http://example.org/sils#vault, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/sils#LogGroup]
+> [http://example.org/sils#shibboleth, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/sils#LogGroup]
+> [http://example.org/sils#lms, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/sils#Sourcetype]
+> [http://example.org/sils#ls, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/sils#Sourcetype]
+> [http://example.org/sils#dmesg, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/sils#Sourcetype]
+> [http://example.org/sils#ps, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/sils#Sourcetype]
+> [http://example.org/sils#aa, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/sils#Sourcetype]
+> [http://example.org/sils#ae, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://example.org/sils#Sourcetype]

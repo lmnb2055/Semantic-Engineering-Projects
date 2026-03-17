@@ -1,0 +1,36 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ex: <http://example.org/>
+
+# This is just an example. Replace the statements below with your own.
+
+ex:FacultyMember
+  rdf:type rdfs:Class ;
+  rdfs:label "Faculty Member"@en ;
+  rdfs:comment "A member of the teaching faculty."@en ;
+  .
+
+ex:Student a rdfs:Class ;
+  rdfs:label "Student"@en ;
+  rdfs:comment "A person who has taken a class."@en .
+
+ex:Course
+  rdf:type rdfs:Class ;
+  rdfs:label "Course"@en ;
+  rdfs:comment "A series of lessons in a particular subject."@en ;
+  .
+
+ex:hasTaught
+  rdf:type rdf:Property ;
+  rdfs:label "has taught"@en ;
+  rdfs:comment "This property relates faculty to the courses they have taught."@en ;
+  rdfs:domain ex:FacultyMember ;
+  rdfs:range ex:Course ;
+  .
+
+ex:hasTaken a rdf:Property ;
+  rdfs:label "has taken"@en ;
+  rdfs:comment "This property relates students to the courses they have taken."@en ;
+  rdfs:domain ex:Student ;
+  rdfs:range ex:Course ;
+  .

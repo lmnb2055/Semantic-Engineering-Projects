@@ -1,0 +1,55 @@
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ex:   <http://example.org/sils#>
+
+# ---- Classes ----
+
+ex:Index
+  rdf:type rdfs:Class ;
+  rdfs:label "Index"@en ;
+  rdfs:comment "A Splunk index (e.g., SILS) that organizes data into major categories."@en ;
+  .
+
+ex:Category
+  rdf:type rdfs:Class ;
+  rdfs:label "Category"@en ;
+  rdfs:comment "A high-level grouping of logs, specialized into SystemCategory and ApplicationCategory."@en ;
+  .
+
+ex:LogGroup
+  rdf:type rdfs:Class ;
+  rdfs:label "Log Group"@en ;
+  rdfs:comment "A logical grouping of logs (e.g., System Logs, Mail Logs, Apache) within a category."@en ;
+  .
+
+ex:Sourcetype
+  rdf:type rdfs:Class ;
+  rdfs:label "Sourcetype"@en ;
+  rdfs:comment "A Splunk sourcetype describing the data format (e.g., linux_secure, apache:access)."@en ;
+  .
+
+# ---- Properties ----
+
+ex:categorizes
+  rdf:type rdf:Property ;
+  rdfs:label "categorizes"@en ;
+  rdfs:comment "Links an Index to the Categories (System/Application) it organizes."@en ;
+  rdfs:domain ex:Index ;
+  rdfs:range  ex:Category ;
+  .
+
+ex:hasLogGroup
+  rdf:type rdf:Property ;
+  rdfs:label "hasLogGroup"@en ;
+  rdfs:comment "Connects a Category (System/Application) to its Log Groups."@en ;
+  rdfs:domain ex:Category ;
+  rdfs:range  ex:LogGroup ;
+  .
+
+ex:beSourcetype
+  rdf:type rdf:Property ;
+  rdfs:label "beSourcetype"@en ;
+  rdfs:comment "Maps a Log Group to one or more Sourcetypes that represent the data format."@en ;
+  rdfs:domain ex:LogGroup ;
+  rdfs:range  ex:Sourcetype ;
+  .
