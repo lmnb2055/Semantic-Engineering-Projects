@@ -48,4 +48,4 @@ While my other projects focus on procedural logic (Python) and user experience (
 ### 💬 Connect with Me
 If you're interested in Knowledge Graphs or how Semantic Web technologies are shaping the future of data, feel free to reach out!
 
-[www.linkedin.com/in/sidney-hsinning-chen] | [[Your Portfolio Site](https://www.sidneychen.cc/)]
+[Linkedin(www.linkedin.com/in/sidney-hsinning-chen)] | [[Your Portfolio Site](https://www.sidneychen.cc/)]
