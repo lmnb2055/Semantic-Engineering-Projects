@@ -1,0 +1,26 @@
+[
+  {
+    "given name": "Winfried Georg",
+    "surname": "Sebald",
+    "books authored": [
+      {
+        "title": "Die Ringe des Saturn",
+        "pages": 371
+      },
+      {
+        "title": "Austerlitz",
+        "pages": 416
+      }
+    ]
+  },
+  {
+    "given name": "Mark Richard",
+    "surname": "McCulloh",
+    "books authored": [
+      {
+        "title": "Understanding W.G. Sebald",
+        "pages": 193
+      }
+    ]
+  }
+]

@@ -1,0 +1,12 @@
+PREFIX orcid: <https://orcid.org/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+orcid:0009-0004-8986-2084 foaf:familyName "Chen" .
+orcid:0009-0004-8986-2084 foaf:givenName "Sidney" .
+orcid:0009-0004-8986-2084 foaf:name "Sidney Chen" .
+orcid:0009-0004-8986-2084 foaf:thumbnail <https://sils.unc.edu/wp-content/uploads/sites/1369/2025/05/Student_Intern_Sidney_Chen.png> .
+orcid:0009-0004-8986-2084 foaf:mbox <mailto:me@sidneychen.cc> .
+orcid:0009-0004-8986-2084 foaf:homepage <https://sidneychen.cc> .
+orcid:0009-0004-8986-2084 foaf:workplaceHomepage <https://sils.unc.edu/people/sidney-chen/> .
+orcid:0009-0004-8986-2084 foaf:schoolHomepage <https://sils.unc.edu/> .
+# <http://example.org/sidney-chen> 

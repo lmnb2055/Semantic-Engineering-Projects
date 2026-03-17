@@ -1,0 +1,24 @@
+PREFIX : <http://example.org/>
+
+:w-g-sebald a :Author ;
+  :given_name "Winfried Georg" ;
+  :surname "Sebald" ;
+  :authored :die-ringe-des-saturn , :austerlitz .
+
+:m-r-mcculloh a :Author ;
+  :given_name "Mark Richard" ;
+  :surname "McCulloh" ;
+  :authored :understanding-w-g-sebald .
+
+:die-ringe-des-saturn a :Book ;
+  :title "Die Ringe des Saturn" ;
+  :pages 371 .
+
+:austerlitz a :Book ;
+  :title "Austerlitz" ;
+  :pages 416 .
+
+:understanding-w-g-sebald a :Book ;
+  :title "Understanding W.G. Sebald" ;
+  :pages 193 ;
+  :about :w-g-sebald .
