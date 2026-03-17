@@ -1,0 +1,10 @@
+which curl
+    /usr/bin/curl
+curl http://www.sidneychen.cc/
+curl --head http://www.sidneychen.cc/
+curl --head https://www.sidneychen.cc/
+curl --head --follow https://www.sidneychen.cc/
+curl --head -L https://www.sidneychen.cc/
+
+N2T - Identifier Resolution Servic
+curl --header "accept: text/turtle" --head https://www.sidneychen.cc/
