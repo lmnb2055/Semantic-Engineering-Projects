@@ -1,5 +1,5 @@
 # Semantic Engineering Portfolio: Knowledge Graphs & Linked Data
-## INLS 620: Website Information Organization, taught by Professor Ryan Shaw
+INLS 620: Website Information Organization, taught by Professor Ryan Shaw
 
 Hey there! I’m **Sidney Chen** 👋✨
 
